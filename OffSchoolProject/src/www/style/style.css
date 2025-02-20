@@ -1,0 +1,830 @@
+/* ==================================================
+   Global Styles
+   ================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #f5f5f5;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    margin-bottom: 4rem;
+}
+
+
+/* ==================================================
+   Navbar & Pages Container
+   ================================================== */
+.navbar,
+.navbar-pages-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 80px;
+    width: auto;
+    margin: 0 1.25rem;
+    object-fit: contain;
+}
+
+.navbar-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.navbar-text-line {
+    display: block;
+    line-height: 1;
+    font-family: 'Times New';
+}
+
+.navbar-text-line:first-child {
+    font-size: 0.8rem;
+    margin-bottom: 0.9rem;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+}
+
+.serviceDiv {
+    display: flex;
+    flex-direction: row;
+    padding: 0.25rem;
+    margin: 1rem auto;
+}
+
+/* ==================================================
+   Generic Button Styles
+   ================================================== */
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    transform: scale(0.98);
+    background-color: #777;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* ==================================================
+   Main Content
+   ================================================== */
+.title-header,
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.search-bar {
+    flex-direction: column;
+}
+
+.search-bar button {
+    margin-top: 1rem;
+}
+
+.search-bar-complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.search-bar input {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-right: 1rem;
+    text-align: center;
+    width: 33%;
+}
+
+
+/* ==================================================
+   Footer
+   ================================================== */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+/* ==================================================
+   Tables
+   ================================================== */
+
+/* Container Divs for Tables */
+.clientsDiv,
+.employeesDiv,
+.priceTableDiv,
+.todayAppointmentsDiv,
+.tomorrowAppointmentsDiv,
+.stocksTableDiv {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 50%;
+}
+
+/* Table Titles */
+.table-title,
+.priceTableTitle,
+.todayAppointmentsTitle,
+.tomorrowAppointmentsTitle,
+.stocksTableTitle {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Base Table Styles */
+.clients-table,
+.employees-table,
+.descriptionTable,
+.descriptionDiv table,
+.priceTable,
+.monthlyFinancialTable,
+.todayAppointmentsTable,
+.tomorrowAppointmentsTable,
+.stocksTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+/* Table Head Styling */
+.clients-table thead,
+.employees-table thead,
+.descriptionTable thead,
+.priceTable thead,
+.monthlyFinancialTable thead,
+.todayAppointmentsTable thead,
+.tomorrowAppointmentsTable thead,
+.stocksTable thead {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Table Cell Styling */
+.clients-table th,
+.clients-table td,
+.employees-table th,
+.employees-table td,
+.descriptionTable th,
+.descriptionTable td,
+.descriptionDiv table th,
+.descriptionDiv table td,
+.priceTable th,
+.priceTable td,
+.monthlyFinancialTable th,
+.monthlyFinancialTable td,
+.todayAppointmentsTable th,
+.todayAppointmentsTable td,
+.tomorrowAppointmentsTable th,
+.tomorrowAppointmentsTable td,
+.stocksTable th,
+.stocksTable td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Row Hover Effects */
+.clients-table tbody tr:hover,
+.employees-table tbody tr:hover,
+.descriptionTable tbody tr:hover,
+.descriptionDiv table tbody tr:hover,
+.priceTable tbody tr:hover,
+.monthlyFinancialTable tbody tr:hover,
+.todayAppointmentsTable tbody tr:hover,
+.tomorrowAppointmentsTable tbody tr:hover,
+.stocksTable tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Alternate Row Coloring */
+.clients-table tbody tr:nth-child(even),
+.employees-table tbody tr:nth-child(even),
+.monthlyFinancialTable tbody tr:nth-child(even),
+.tomorrowAppointmentsTable tbody tr:nth-child(even),
+.stocksTable tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Selected Row Styling */
+.clients-table tbody tr.selected,
+.employees-table tbody tr.selected,
+.descriptionTable tbody tr.selected,
+.priceTable tbody tr.selected,
+.descriptionDiv table tbody tr.selected,
+.stocksTable tbody tr.selected {
+    background-color: #d1e7dd;
+}
+
+/* Table Data Cell Font Color & Size */
+.clients-table td,
+.employees-table td,
+.priceTable td,
+.todayAppointmentsTable td,
+.tomorrowAppointmentsTable td,
+.stocksTable td {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Specific Price Table Styles for Scrollable Tbody */
+/* Price Table Base */
+.priceTable,
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Price Table Header */
+.priceTable thead,
+.clients-table thead {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: table; /* Ensure headers are displayed as table */
+    width: 100%;
+    table-layout: fixed; /* Ensures columns have equal width */
+}
+
+/* Price Table Body with Scroll */
+.priceTable tbody,
+.clients-table tbody {
+    display: block;
+    max-height: 225px; /* Adjust the height as needed */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    width: 100%;
+}
+
+
+/* Price Table Body Rows */
+.priceTable tbody tr,
+.clients-table tbody tr {
+    display: table; /* Keep rows as table display to align columns */
+    width: 100%;
+    table-layout: fixed; /* Ensures columns align with the header */
+}
+
+/* Ensure td text is scrollable if content is too large */
+.clients-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.priceTable td {
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: clip;
+}
+
+
+
+/* ==================================================
+   Buttons Containers (Extra)
+   ================================================== */
+.detailsButtons,
+.buttonsDiv,
+.descriptionButtons,
+.editDetailsButtons,
+.priceTableButtons,
+.clientButtons,
+.employeeButtons,
+.financialButtons,
+.editFinancialButtons,
+.priceTableButtons,
+.editButtonsPriceTableDiv,
+.editAppointmentButtons,
+.stocksButtons,
+.stockFormButtons,
+.editStockButtonsDiv {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.removeServiceButton {
+    padding: 0.25rem 0.5rem;
+    font-size: smaller;
+
+}
+
+/* Buttons within the table (for quantity control) */
+#stocksTable td button {
+    font-size: 17px;
+    width: 60px;
+    padding: 3.5px 6px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#stocksTable td span {
+    margin-right: 28px;
+}
+
+
+/* ==================================================
+   Forms
+   ================================================== */
+.employeeForm,
+.detailsDiv,
+.editDetailsDiv,
+.descriptionDiv,
+.appointmentForm,
+.financialDiv,
+.editFinancialDiv,
+.financialFormDiv,
+.monthlyFinancialDiv,
+.priceTableDiv,
+.editPriceTableDiv,
+.createClientDiv,
+.createPriceTableDiv,
+.editAppointmentDiv,
+.editStockDiv,
+.stockFormDiv {
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.clientForm {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.descriptionDiv {
+    max-width: 100%;
+}
+
+.createClientForm label,
+.employeeForm label,
+.appointmentForm label,
+.inputContainer label,
+.profitLabel,
+.monthSelectLabel,
+.appointmentTechnicalSheetLabel,
+.stockFormDiv label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.createClientDiv input,
+.employeeForm input,
+.appointmentForm input,
+.inputContainer input,
+.appointmentEmployee,
+.monthSelect,
+.stockFormDiv input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+.createClientDiv input:focus,
+.employeeForm input:focus,
+.appointmentForm input:focus,
+.inputContainer input:focus,
+.appointmentEmployee:focus,
+.monthSelect:focus,
+.appointmentTechnicalSheet:focus,
+.stockFormDiv input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.appointmentForm textarea {
+    resize: none;
+}
+
+.appointmentTechnicalSheet {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+
+
+
+
+/* ==================================================
+   Descriptions and Details
+   ================================================== */
+.detailsTitle,
+.descriptionTitle,
+.descriptionTableTitle,
+.editDetailsTitle {
+    font-size: 1.75rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.detailsDiv p,
+.descriptionDiv p,
+.financialDiv p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.25rem 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+/* ==================================================
+   Miscellaneous
+   ================================================== */
+.mainContainer,
+.mainPageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 2rem;
+}
+
+.mainPageContainer {
+    gap: 2rem;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.inputContainer label {
+    width: fit-content;
+    text-align: left;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.inputContainer input {
+    flex: 1;
+}
+
+
+
+
+
+/* ==================================================
+   Responsive Tables
+   ================================================== */
+/* Make everything responsive 760px*/
+@media (max-width: 768px) {
+
+    .clientsDiv,
+    .employeesDiv,
+    .priceTableDiv,
+    .todayAppointmentsDiv,
+    .tomorrowAppointmentsDiv {
+        max-width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-bar-complete {
+        width: 100%;
+    }
+
+    .clients-table,
+    .employees-table,
+    .descriptionTable,
+    .descriptionDiv table,
+    .priceTable,
+    .monthlyFinancialTable,
+    .todayAppointmentsTable,
+    .tomorrowAppointmentsTable {
+        font-size: 0.8rem;
+    }
+
+    .clients-table th,
+    .clients-table td,
+    .employees-table th,
+    .employees-table td,
+    .descriptionTable th,
+    .descriptionTable td,
+    .descriptionDiv table th,
+    .descriptionDiv table td,
+    .priceTable th,
+    .priceTable td,
+    .monthlyFinancialTable th,
+    .monthlyFinancialTable td,
+    .todayAppointmentsTable th,
+    .todayAppointmentsTable td,
+    .tomorrowAppointmentsTable th,
+    .tomorrowAppointmentsTable td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .detailsButtons,
+    .buttonsDiv,
+    .descriptionButtons,
+    .editDetailsButtons,
+    .priceTableButtons,
+    .employeeButtons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .clientForm,
+    .employeeForm,
+    .detailsDiv,
+    .editDetailsDiv,
+    .descriptionDiv,
+    .appointmentForm,
+    .financialDiv,
+    .editFinancialDiv,
+    .financialFormDiv,
+    .monthlyFinancialDiv,
+    .priceTableDiv {
+        padding: 1rem;
+    }
+
+    .clientForm input,
+    .employeeForm input,
+    .appointmentForm input,
+    .inputContainer input,
+    .appointmentEmployee,
+    .monthSelect,
+    .createClientDiv input {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .clientForm button.createClientButton,
+    .employeeForm button.createEmployeeButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .clientForm button.cancelClientButton,
+    .employeeForm button.cancelEmployeeButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .detailsDiv p,
+    .descriptionDiv p {
+        font-size: 0.9rem;
+    }
+
+    .detailsTitle,
+    .descriptionTitle,
+    .descriptionTableTitle,
+    .editDetailsTitle {
+        font-size: 1.5rem;
+    }
+
+    .inputContainer label {
+        font-size: 0.9rem;
+    }
+
+    .inputContainer input {
+        font-size: 0.9rem;
+    }
+
+    .appointmentTechnicalSheetLabel {
+        font-size: 0.9rem;
+    }
+
+    .appointmentTechnicalSheet {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .search-bar button {
+        margin-top: 0.5rem;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-bar-complete {
+        width: 100%;
+    }
+
+    .serviceDiv {
+        flex-direction: column;
+        padding: 0.25rem;
+        margin: 1rem auto;
+    }
+
+    .removeServiceButton {
+        padding: 0.25rem 0.5rem;
+        font-size: smaller;
+    }
+}
+
+
+/* Make everything responsive 1660px*/
+@media (max-width: 1660px) {
+    .mainPageContainer {
+        flex-direction: column;
+    }
+
+    .search-bar input {
+        width: 30%;
+        margin-right: 0;
+    }
+
+    .search-bar-complete {
+        width: 100%;
+    }
+
+    .clients-table,
+    .employees-table,
+    .descriptionTable,
+    .descriptionDiv table,
+    .priceTable,
+    .monthlyFinancialTable,
+    .todayAppointmentsTable,
+    .tomorrowAppointmentsTable {
+        font-size: 0.8rem;
+    }
+
+    .clients-table th,
+    .clients-table td,
+    .employees-table th,
+    .employees-table td,
+    .descriptionTable th,
+    .descriptionTable td,
+    .descriptionDiv table th,
+    .descriptionDiv table td,
+    .priceTable th,
+    .priceTable td,
+    .monthlyFinancialTable th,
+    .monthlyFinancialTable td,
+    .todayAppointmentsTable th,
+    .todayAppointmentsTable td,
+    .tomorrowAppointmentsTable th,
+    .tomorrowAppointmentsTable td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .detailsButtons,
+    .buttonsDiv,
+    .descriptionButtons,
+    .editDetailsButtons,
+    .priceTableButtons,
+    .employeeButtons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .clientForm,
+    .employeeForm,
+    .detailsDiv,
+    .editDetailsDiv,
+    .descriptionDiv,
+    .appointmentForm,
+    .financialDiv,
+    .editFinancialDiv,
+    .financialFormDiv,
+    .monthlyFinancialDiv,
+    .priceTableDiv {
+        padding: 1rem;
+    }
+
+    .clientForm input,
+    .employeeForm input,
+    .appointmentForm input,
+    .inputContainer input,
+    .appointmentEmployee,
+    .monthSelect,
+    .createClientDiv input {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .clientForm button.createClientButton,
+    .employeeForm button.createEmployeeButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .clientForm button.cancelClientButton,
+    .employeeForm button.cancelEmployeeButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .detailsDiv p,
+    .descriptionDiv p {
+        font-size: 0.9rem;
+    }
+
+    .detailsTitle,
+    .descriptionTitle,
+    .descriptionTableTitle,
+    .editDetailsTitle {
+        font-size: 1.5rem;
+    }
+
+    .inputContainer label {
+        font-size: 0.9rem;
+    }
+
+    .inputContainer input {
+        font-size: 0.9rem;
+    }
+
+    .appointmentTechnicalSheetLabel {
+        font-size: 0.9rem;
+    }
+
+    .appointmentTechnicalSheet {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .search-bar button {
+        margin-top: 0.5rem;
+    }
+}
