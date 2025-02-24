@@ -55,3 +55,7 @@ Open your browser and navigate to `http://localhost:3000` to access the applicat
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 Thank you for using Project Hairdresser!
+
+## Authors
+- [Bernardo Vaz](https://github.com/BernardoVaz10)
+- [Tiago Ramada](https://github.com/tRamada)
