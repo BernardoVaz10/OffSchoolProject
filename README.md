@@ -10,6 +10,7 @@ Welcome to Project Hairdresser! This project aims to revolutionize the hairdress
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Authors](#authors)
 
 ## Introduction
 
